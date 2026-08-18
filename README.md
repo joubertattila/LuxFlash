@@ -62,7 +62,9 @@ LuxFlash/
 ├── README.md              <- this file
 ├── LICENSE                 <- GPL-3.0 (see "License" below)
 ├── doc/
-│   └── LuxFlash_terv.md      <- design-decision log (Hungarian, historical)
+│   ├── LuxFlash_terv.md      <- design-decision log (Hungarian, historical)
+│   ├── LuxFlash_Schematic.png <- light-sensor circuit schematic
+│   └── LuxFlash_KiCAD.zip     <- full KiCad project for the schematic
 ├── app/                    <- PlatformIO firmware project
 │   ├── platformio.ini
 │   ├── wifi_secrets.ini.example
