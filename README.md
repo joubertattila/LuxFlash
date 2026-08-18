@@ -47,9 +47,13 @@ any point after the initial flash.
 - RP2040 "Pico W-2023" clone board (ESP8285 AT WiFi modem, **not** the
   official CYW43-based Pico W) - same board WiFlash targets.
 - A BPW34 photodiode feeding an MCP6002 dual op-amp: stage 1 is a
-  transimpedance amplifier (270 kΩ feedback, photodiode held at a
-  virtual ground for good linearity), stage 2 is a unity-gain buffer
+  transimpedance amplifier (photodiode held at a virtual ground for good
+  linearity, feedback resistor value tuned to the sensor's light range -
+  see the schematic for the exact value), stage 2 is a unity-gain buffer
   into the RP2040's ADC (GP27).
+
+Schematic: [doc/LuxFlash_Schematic.png](doc/LuxFlash_Schematic.png) -
+full KiCad project in [doc/LuxFlash_KiCAD.zip](doc/LuxFlash_KiCAD.zip).
 
 ## Directory layout
 
