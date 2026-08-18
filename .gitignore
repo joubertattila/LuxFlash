@@ -1,0 +1,24 @@
+# PlatformIO build output
+app/.pio
+
+# Contains the real WiFi SSID/password (build_flags) - NEVER commit this file.
+app/wifi_secrets.ini
+
+# Python virtual environment and bytecode cache
+LuxFlash_py/env/
+__pycache__/
+*.pyc
+
+# Contains the real database credentials and Pico IP - NEVER commit this file.
+LuxFlash_py/config.py
+
+# Contains the real database credentials - NEVER commit this file.
+php/db_config.php
+
+# Serial-monitor capture logs from debugging sessions
+app/logs/
+
+# Personal, machine-specific convenience scripts (hardcoded local paths) -
+# not part of the example, deliberately not tracked.
+elsőre_USB-n.sh
+parancs.sh

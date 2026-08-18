@@ -1,0 +1,11 @@
+<?php
+// LuxFlash - database credentials template.
+//
+// Copy this file to "db_config.php" (same folder) and fill in your own
+// values - "db_config.php" itself is gitignored and must NEVER be
+// committed, since it will contain your real database password.
+
+$DB_HOST = "localhost";
+$DB_USER = "your-db-user";
+$DB_PASSWORD = "your-db-password";
+$DB_NAME = "your-db-name";

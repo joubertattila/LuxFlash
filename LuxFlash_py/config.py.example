@@ -1,0 +1,34 @@
+# Same role as RFLink_test_py/config.py, but over WiFi (TCP socket)
+# transport - instead of a serial port/baud rate, this needs the Pico's
+# IP address and the port configured in Config.h.
+#
+# Copy this file to "config.py" (same folder) and fill in your own
+# values below. "config.py" itself is gitignored and must NEVER be
+# committed - it will contain your real database password.
+
+WFLINK_HOST = "192.168.1.100"   # FILL IN your Pico's IP address here - the
+                                 # Serial Monitor prints it at boot ("IP address: ...")
+WFLINK_PORT = 3000               # must match WFLINK_PORT in app/src/Config.h
+
+RESPONSE_TIMEOUT_S = 5.0         # seconds - the TCP connect+response timeout
+                                  # (2s was too tight: a single lost SYN packet's
+                                  # TCP retransmit alone can take several seconds
+                                  # on a flaky WiFi signal, e.g. through an extender)
+
+DEVICE_ID = 1                    # must match DEVICE_ID in app/src/Config.h
+
+# ADC resolution and reference voltage.
+ADC_MAX_VAL = 4095
+PICO_ADC_REF_V = 3.3
+
+# --- MariaDB database configuration ---
+# IMPORTANT: this script can only write to the database from a machine
+# that can actually reach the host below on the given port - fill in
+# your own values.
+DB_CONFIG = {
+    'host': 'your-db-host',
+    'user': 'your-db-user',
+    'password': 'your-db-password',
+    'database': 'your-db-name',
+    'port': 3306
+}
